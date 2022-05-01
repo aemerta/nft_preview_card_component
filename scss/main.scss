@@ -1,0 +1,145 @@
+@import '_variables';
+@import '_reset';
+//import font from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding:1rem;
+    font-size: $paragraph;
+    font-family: 'Outfit', sans-serif;
+    color: $primary;
+    background: $neutral1;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    max-width: 350px; 
+    display: flex;
+    flex-direction: column;
+    background-color: $neutral2;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    transition: 0.2s ease-in-out;
+
+
+    &:hover {
+        box-shadow: 0 .5rem 1.5rem $primary;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+        
+        &:hover .card__image {
+            cursor:pointer;
+            opacity: 0.4;
+        }
+
+        &:hover {
+            background: $secondary url(../images/icon-view.svg) ;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: .5rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+        color: $white;
+        font-family: 'Overpass', sans-serif;
+        font-size: $heading;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+        color: $primary;
+        font-weight: 300;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+    }
+
+    &__price {
+        display: flex;
+        color: $secondary;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+
+        &::before{
+            content: '';
+            display: inline-block;
+            margin-right: .5rem;
+            width: 12px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url(../images/icon-ethereum.svg) ;
+        }
+    }
+
+    &__time {
+        display: flex;
+        color: $primary;
+        align-items: center;
+        
+
+        &::before{
+            content: '';
+            display: inline-block;
+            margin-right: .5rem;
+            width: 15px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url(../images/icon-clock.svg) ;
+        }
+    }
+
+    &__divider{
+        margin-bottom:1rem;
+    }
+
+    &__footer {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+
+    &__avatar {
+        width:2rem;
+        border-radius: 50%;
+        border: solid 1px white;
+        margin-right: 1rem;
+    }
+
+    &__link {
+        color: $white;
+        transition: ease-in-out 0.2s;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

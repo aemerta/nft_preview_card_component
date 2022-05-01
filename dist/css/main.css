@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  color: #8bacda;
+  background: #0d192b;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #14253d;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0.5rem 1.5rem #8bacda;
+          box-shadow: 0 0.5rem 1.5rem #8bacda;
+}
+
+.card__image-wrapper {
+  position: relative;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+
+.card__image-wrapper:hover .card__image {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.card__image-wrapper:hover {
+  background: #00fff7 url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.card__heading {
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'Overpass', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card__text {
+  margin-bottom: 1rem;
+  color: #8bacda;
+  font-weight: 300;
+}
+
+.card__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #00fff7;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+
+.card__price::before {
+  content: '';
+  display: inline-block;
+  margin-right: .5rem;
+  width: 12px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon-ethereum.svg);
+}
+
+.card__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #8bacda;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__time::before {
+  content: '';
+  display: inline-block;
+  margin-right: .5rem;
+  width: 15px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon-clock.svg);
+}
+
+.card__divider {
+  margin-bottom: 1rem;
+}
+
+.card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__avatar {
+  width: 2rem;
+  border-radius: 50%;
+  border: solid 1px white;
+  margin-right: 1rem;
+}
+
+.card__link {
+  color: white;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  color: #00fff7;
+}
+/*# sourceMappingURL=main.css.map */
